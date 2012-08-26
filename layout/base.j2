@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    {% block starthead %}{% endblock starthead %}
+    <meta charset="{{ resource.meta.charset }}">
+
+    <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+
+    {% block favicons %}
+    <link rel="shortcut icon" href="{{ media_url('/favicon.ico') }}">
+    {% endblock favicons %}
+
+    {% block css %}
+    <link rel="stylesheet" href="{{ media_url('css/site.css') }}">
+    <link rel="stylesheet" href="{{ media_url('css/pygments.css') }}">
+    {% endblock css %}
+    {% block endhead %}{% endblock endhead %}
+</head>
+<body>
+  {% block content %}
+    <div id="container">
+        {% block container %}
+        <header>
+            {% block header -%}
+            <div class="banner">
+                <h1>GConfs</h1>
+                <h3>Assocation pour les conférences à ÉPITA</h3>
+            </div>
+            {% endblock %}
+            {% block nav %}
+                {% from "macros.j2" import render_nav with context %}
+                {{ render_nav(menu, 'menu') }}
+            {% endblock %}
+        </header>
+        <div id="content">
+            <section>
+            {% block main %}
+            {% endblock main %}
+            </section>
+        </div>
+        {% endblock container %}
+
+        <footer>
+            <p>Produit avec <a href="http://ringce.com/hyde">hyde</a>.</p>
+        </footer>
+    </div>
+    {% endblock content%}
+</body>
+</html>
