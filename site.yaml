@@ -17,15 +17,19 @@ context:
             -
                 name: Conférences à venir
                 type: node
-                url: confs/incoming
+                url: confs/incoming/
             -
                 name: Conférences passées
                 type: node
-                url: confs/passed
+                url: confs/passed/
+            -
+                name: Comptes-rendus
+                type: node
+                url: reports/
             -
                 name: Progression
                 type: node
-                url: status
+                url: status/
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
