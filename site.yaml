@@ -15,13 +15,9 @@ context:
                 type: node
                 url: .
             -
-                name: Conférences à venir
+                name: Conférences
                 type: node
-                url: confs/incoming/
-            -
-                name: Conférences passées
-                type: node
-                url: confs/passed/
+                url: confs/
             -
                 name: Comptes-rendus
                 type: node
