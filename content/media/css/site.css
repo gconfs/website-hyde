@@ -103,3 +103,6 @@ footer {
     background: #f0e8e0 url(/media/images/footer-background.png)
                 repeat-x bottom left;
 }
+
+dt { margin-top: 1em; font-weight: bold; }
+dd { margin-bottom: 1em; }
