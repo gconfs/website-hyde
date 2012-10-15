@@ -17,6 +17,21 @@
     <dd><a href="{{ resource.meta.poster }}">Télécharger</a></dd>
 {% endif %}
 
+{% if resource.meta.slides %}
+    <dt>Diapositives</dt>
+    <dd><a href="{{ resource.meta.slides }}">Télécharger</a></dd>
+{% endif %}
+
+{% if resource.meta.exercises %}
+    <dt>Sujet de TP</dt>
+    <dd><a href="{{ resource.meta.exercices }}">Télécharger</a></dd>
+{% endif %}
+
+{% if resource.meta.materials %}
+    <dt>Fichiers de TP</dt>
+    <dd><a href="{{ resource.meta.materials }}">Télécharger</a></dd>
+{% endif %}
+
     <dt>Conférenciers</dt>
     <dd>
         <ul>
