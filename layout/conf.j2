@@ -10,7 +10,10 @@
     <dd>{{ resource.meta.date }}</dd>
 
     <dt>Lieu</dt>
-    <dd>{{ resource.meta.place }}</dd>
+    <dd>Conférence : {{ resource.meta.place }}</dd>
+{% if resource.meta.tp %}
+    <dd>TP : {{ resource.meta.tp }}</dd>
+{% endif %}
 
 {% if resource.meta.poster %}
     <dt>Affiche</dt>
