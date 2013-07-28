@@ -25,6 +25,11 @@
     <dd><a href="{{ resource.meta.slides }}">Télécharger</a></dd>
 {% endif %}
 
+{% if resource.meta.video %}
+    <dt>Vidéo</dt>
+    <dd><a href="{{ resource.meta.video }}">Visionner</a></dd>
+{% endif %}
+
 {% if resource.meta.exercises %}
     <dt>Sujet de TP</dt>
     <dd><a href="{{ resource.meta.exercices }}">Télécharger</a></dd>
