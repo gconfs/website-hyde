@@ -35,6 +35,13 @@
     <dd><a href="{{ resource.meta.exercices }}">Télécharger</a></dd>
 {% endif %}
 
+{% if resource.meta.tps %}
+    {% for tp in resource.meta.tps %}
+        <dt>Sujet de TP "{{ tp.name }}"</dt>
+        <dd><a href="{{ tp.link }}">Télécharger</a></dd>
+    {% endfor %}
+{% endif %}
+
 {% if resource.meta.materials %}
     <dt>Fichiers de TP</dt>
     <dd><a href="{{ resource.meta.materials }}">Télécharger</a></dd>
