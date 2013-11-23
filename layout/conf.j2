@@ -25,8 +25,14 @@
     <dd><a href="{{ resource.meta.slides }}">Télécharger</a></dd>
 {% endif %}
 
-{% if resource.meta.video %}
+
+{% if resource.meta.embed or resourc.meta.video %}
     <dt>Vidéo</dt>
+{% endif %}
+{% if resource.meta.embed %}
+    <iframe frameborder="0" width="480" height="270" src="{{ resource.meta.embed }}"></iframe>
+{% endif %}
+{% if resource.meta.video %}
     <dd><a href="{{ resource.meta.video }}">Visionner</a></dd>
 {% endif %}
 
