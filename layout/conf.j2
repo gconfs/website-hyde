@@ -53,6 +53,7 @@
     <dd><a href="{{ resource.meta.materials }}">Télécharger</a></dd>
 {% endif %}
 
+{% if resource.meta.speakers %}
     <dt>Conférenciers</dt>
     <dd>
         <ul>
@@ -61,6 +62,7 @@
 {% endfor %}
         </ul>
     </dd>
+{% endif %}
 
 </dl>
 
