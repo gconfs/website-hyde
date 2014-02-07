@@ -26,6 +26,11 @@ context:
                 name: Progression
                 type: node
                 url: status/
+
+            -
+                name: Contact
+                type: node
+                url: contact/
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
