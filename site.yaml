@@ -31,6 +31,10 @@ context:
                 name: Contact
                 type: node
                 url: contact/
+            -
+                name: Stream
+                type: node
+                url: stream/
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
