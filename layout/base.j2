@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ media_url('css/site.css') }}">
     <link rel="stylesheet" href="{{ media_url('css/pygments.css') }}">
     {% endblock css %}
+
     {% block endhead %}{% endblock endhead %}
 </head>
 <body>
@@ -23,7 +24,7 @@
         <header>
             {% block header -%}
             <div class="banner">
-                <h1>GConfs</h1>
+                <h1 id="gconfs_title">GConfs</h1>
                 <h3>Assocation pour les conférences à EPITA et EPITECH</h3>
             </div>
             {% endblock %}
@@ -45,5 +46,17 @@
         </footer>
     </div>
     {% endblock content%}
+    {% block js %}
+    <script>
+    if (document.referrer.contains("gconf.fr"))
+    {
+        document.getElementById("gconfs_title").innerHTML =
+                "GConf<span style='color:red; font-size:10em'>s</span>"
+        document.getElementById("content").innerHTML =
+                document.getElementById("content").innerHTML.replace("GConfs",
+                        "GConf<span style='color:red'>s</span>", "gm")
+    }
+    </script>
+    {% endblock js %}
 </body>
 </html>
