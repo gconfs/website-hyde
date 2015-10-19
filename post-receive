@@ -1,0 +1,10 @@
+#!/bin/sh
+
+GIT_REPO="$HOME/website.git"
+TMP_GIT_CLONE="$HOME/tmp/website"
+PUBLIC_WWW="$HOME/build"
+
+git clone "$GIT_REPO" "$TMP_GIT_CLONE"
+hyde -s "$TMP_GIT_CLONE" gen -d "$PUBLIC_WWW"
+rm -Rf "$TMP_GIT_CLONE"
+exit
